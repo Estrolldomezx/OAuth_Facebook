@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./style.css" type="text/css"> -->
+
+</head>
+
+<body>
+    <% if (!user) { %>
+        <div style="width:500px;height:180px;">
+            <h2 style="font-size:40px;">Welcome! Please log in.</h2>
+            <a href="/auth/facebook">Log in</a>
+        </div>
+        <% } else { %>
+            <h2>Hello, <%= user.displayName %>.</h2>
+            <h3>
+                <%= user.id %>
+                    <h3>
+
+
+                        <% } %>
+    <style>
+        * {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</body>
+
+</html>
