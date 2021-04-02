@@ -47,15 +47,8 @@ app.get('/auth/facebook/cornboildev',
         failureRedirect: '/'
     }))
 app.get('/profile', (req, res) => {
-    // fs.readFile('/home', function (err, data) {
-    //     //  res.send(req.user);
-    // })
     res.render('home', {user:req.user});
-    
 
-    // res.send(req.user);
-    // res.json(req.user.displayName)
-     //console.log(req.user.id);
 })
 app.listen(8000, () => {
     console.log('server is running at localhost!')
