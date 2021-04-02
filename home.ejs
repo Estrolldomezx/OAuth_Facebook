@@ -10,12 +10,13 @@
 </head>
 
 <body>
-
+    <!-- หากยังไม่ได้ authentication จะต้องไป authen ใหม่ -->
     <% if (!user) { %>
         <div style="width:500px;height:180px;">
             <h2 style="font-size:40px;">Welcome! Please log in.</h2>
             <a href="/auth/facebook">Log in</a>
         </div>
+        <!-- หาก authen เสร็จแล้ว จะเข้าสู่หน้าต่อไปนี้     -->
         <% } else { %>
             <div class="container">
                 <img id="logo2"
@@ -26,11 +27,13 @@
                 <div class="content">
                     <h1>Welcome to Cornboil Dev</h1>
                     <h1 style="color: gold;">
-                        <%= user.displayName %>.
+                        <%= user.displayName %>
+                            <!-- ข้อมูล user ที่เป็น displayName (ชื่อ facebook ของ user) -->
                     </h1>
                     <h3>This is your cornboil id : </h3>
                     <h3 style="color: gold;">
                         <%= user.id %>
+                            <!-- ข้อมูล user ที่เป็น id facebook ของ user -->
                     </h3>
                     <h3>
                         <% } %>
